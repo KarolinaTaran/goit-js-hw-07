@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 10 (optional)</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <style>
+    #controls {
+      display: flex;
+      gap: 16px
+    }
+
+    .input-number {
+      display: flex;
+      padding: 8px 72px;
+      border-radius: 8px;
+      border: 1px solid #808080;
+    }
+
+    .btn-create {
+      border-radius: 8px;
+      background: #4E75FF;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      width: 120px;
+      padding: 8px 16px;
+    }
+
+    .btn-create:hover,
+    .btn-create:focus {
+      background: #6C8CFF;
+    }
+
+    .btn-destroy {
+      border-radius: 8px;
+      background: #FF4E4E;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      width: 120px;
+      padding: 8px 16px;
+    }
+
+    .btn-destroy:hover,
+    .btn-destroy:focus {
+      background: #FF7070;
+    }
+  </style>
+</head>
+
+<body>
+  <p><a href="index.html">Go back</a></p>
+
+  <div id="controls">
+    <input class="input-number" type="number" min="1" max="100" step="1" />
+    <button class="btn-create" type="button" data-create>Create</button>
+    <button class="btn-destroy" type="button" data-destroy>Destroy</button>
+  </div>
+
+  <div id="boxes"></div>
+
+  <script src="js/task-06.js" type="module"></script>
+</body>
+
+</html>
