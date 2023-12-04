@@ -93,7 +93,7 @@ img {
 
 /* Task-2 */
 
-.gallery-list {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;

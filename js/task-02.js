@@ -14,16 +14,19 @@ const images = [
 ];
 
 const ulElement = document.querySelector(".gallery");
-const liElement = document.createElement("li");
-ulElement.append(liElement);
-
+const fragment = document.createDocumentFragment();
 images.forEach((el) => {
+  const liElement = document.createElement("li");
+  liElement.classList.add("gallery-item");
+
   const imgElement = document.createElement("img");
-  liElement.classList.add("gallery-list");
-  imgElement.classList.add("gallery-images");
+  imgElement.classList.add("gallery-img");
   imgElement.src = el.url;
   imgElement.alt = el.alt;
   imgElement.style.width = "360px";
   imgElement.style.height = "300px";
+
   liElement.append(imgElement);
+  fragment.append(liElement);
+  ulElement.append(fragment);
 });

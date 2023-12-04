@@ -3,7 +3,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const inputs = form.elements;
   let formData = {};
-  let formIsOk = true;
+  let isFormValid = true;
   for (let i = 0; i < inputs.length; i++) {
     if (
       inputs[i].nodeName === "INPUT" &&
@@ -11,7 +11,7 @@ form.addEventListener("submit", (event) => {
     ) {
       let value = inputs[i].value.trim();
       if (!value.length) {
-        formIsOk = false;
+        isFormValid = false;
         break;
       } else {
         let key = inputs[i].name;
@@ -19,16 +19,10 @@ form.addEventListener("submit", (event) => {
       }
     }
   }
-  if (formIsOk) {
+  if (isFormValid) {
     console.log(formData);
     form.reset();
   } else {
     alert(`All form fields must be filled in`);
   }
-});
-const formFocus = document.querySelectorAll(".form-field");
-formFocus.forEach((element) => {
-  element.addEventListener("click", () => {
-    element.focus();
-  });
 });
