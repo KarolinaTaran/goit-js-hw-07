@@ -10,19 +10,16 @@ const numberInput = document.querySelector(".input-number");
 const boxes = document.getElementById("boxes");
 
 createButton.addEventListener("click", () => {
+  destroyBoxes();
   const amount = Number(numberInput.value);
   if (amount > 0 && amount <= 100) {
     for (let i = 1; i <= amount; i++) {
       const box = document.createElement("div");
       box.classList.add("box");
       box.style.backgroundColor = getRandomHexColor();
-      boxes.appendChild(box);
-    }
-    const boxesAmount = boxes.querySelectorAll(".box");
-    for (let i = 0; i < boxesAmount.length; i++) {
-      boxesAmount[i].style.width = boxesAmount[i].style.height =
-        i * 10 + 30 + "px";
-      console.log(boxesAmount);
+      const size = i * 10 + 30 + "px";
+      box.style.width = box.style.height = size;
+      boxes.append(box);
     }
     numberInput.value = "";
     return console.log(boxes);

@@ -28,5 +28,5 @@ images.forEach((el) => {
 
   liElement.append(imgElement);
   fragment.append(liElement);
-  ulElement.append(fragment);
 });
+ulElement.append(fragment);

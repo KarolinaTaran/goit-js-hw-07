@@ -2,7 +2,7 @@ const form = document.querySelector(".login-form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const inputs = form.elements;
-  let formData = {};
+  const formData = {};
   let isFormValid = true;
   for (let i = 0; i < inputs.length; i++) {
     if (
